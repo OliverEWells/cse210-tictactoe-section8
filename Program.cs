@@ -2,21 +2,24 @@
 using System;
 using System.Collections.Generic;
 
+namespace Board_using;
+
 class TicTacToe
 {
     static void Main(string[] args)
     {
 
         Board board = new Board();
+        board.make_board();
     
         string currentPlayer = "x";
 
-        while (!IsGameOver(board))
+        while (!IsGameOver(board.board))
         {
-            DisplayBoard(board);
+            DisplayBoard(board.board);
 
             int choice = GetMoveChoice(currentPlayer);
-            MakeMove(board, choice, currentPlayer);
+            MakeMove(board.board, choice, currentPlayer);
 
             currentPlayer = GetNextPlayer(currentPlayer);
         }

@@ -1,10 +1,12 @@
+namespace Board_using;
+
 class Board {
 // use camel case. ThisIsCamelCase. Snake case is this_is_snake_case
 
-    List<string> board = new List<string>();
+    public List<string> board = new List<string>();
     //type        name        brand new list of strings is the property
 
-    public Board() {
+    public void make_board() {
         for (int i=1; i<=9; i++) {
             board.Add(i.ToString());
         }
